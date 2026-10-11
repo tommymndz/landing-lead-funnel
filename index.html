@@ -1,58 +1,202 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auditoría de Crecimiento | Reserva tu Sesión</title>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-56V7RJ95');</script>
-<!-- End Google Tag Manager -->
-
+    <title>Learn Spanish Online | Free Trial Lesson</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #0f172a; color: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
-        .card { background: #1e293b; border-radius: 16px; padding: 40px; max-width: 500px; width: 100%; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); border: 1px solid #334155; }
-        h1 { font-size: 2rem; margin-bottom: 12px; color: #ffffff; }
-        p { color: #94a3b8; font-size: 1rem; margin-bottom: 24px; line-height: 1.5; }
-        .form-group { margin-bottom: 20px; text-align: left; }
-        label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 8px; color: #cbd5e1; }
-        input, select, textarea { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: #ffffff; font-size: 1rem; outline: none; }
-        input:focus, select:focus, textarea:focus { border-color: #38bdf8; }
-        button { width: 100%; padding: 14px; border: none; border-radius: 8px; background: #38bdf8; color: #0f172a; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
-        button:hover { background: #7dd3fc; }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+
+        .hero-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefits {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .benefits li {
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .benefits li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #334155;
+            background-color: #0f172a;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--accent);
+        }
+
+        button {
+            width: 100%;
+            padding: 0.85rem;
+            border-radius: 0.5rem;
+            border: none;
+            background-color: var(--accent);
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--accent-hover);
+            color: white;
+        }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-    <div class="card">
-        <h1>Impulsa tu Crecimiento</h1>
-        <p>Déjanos tus datos y agendaremos una auditoría de 30 minutos sin costo para analizar tus números.</p>
+    <div class="container">
+        <div class="hero-content">
+            <h1>Master <span>Spanish</span> Confidently in Weeks</h1>
+            <p>1-on-1 personalized online lessons designed for real-world conversations. Start speaking from your very first class.</p>
+            <ul class="benefits">
+                <li>Native & certified Spanish tutors</li>
+                <li>Flexible schedules fitting your time zone</li>
+                <li>Tailored materials for business or travel</li>
+            </ul>
+        </div>
 
-        <!-- Formulario configurado para ir directo a gracias.html -->
-        <form action="gracias.html" method="GET">
-            <div class="form-group">
-                <label for="nombre">Nombre completo *</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Correo electrónico *</label>
-                <input type="email" id="email" name="email" required placeholder="tu@email.com">
-            </div>
-
-            <div class="form-group">
-                <label for="empresa">Empresa / Proyecto</label>
-                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
-            </div>
-
-            <button type="submit">Solicitar Auditoría Gratis</button>
-        </form>
+        <div class="card">
+            <h2>Claim Your Free Trial</h2>
+            <p>Fill out the form below to book a free 30-minute 1-on-1 trial session.</p>
+            <form action="gracias.html" method="GET">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="nombre" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="level">Current Spanish Level</label>
+                    <select id="level" name="empresa" required>
+                        <option value="" disabled selected>Select your level</option>
+                        <option value="Beginner">Beginner (A1-A2)</option>
+                        <option value="Intermediate">Intermediate (B1-B2)</option>
+                        <option value="Advanced">Advanced (C1-C2)</option>
+                    </select>
+                </div>
+                <button type="submit">Book Free Trial Class</button>
+            </form>
+        </div>
     </div>
-
 </body>
 </html>
